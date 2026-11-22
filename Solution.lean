@@ -36,6 +36,31 @@ noncomputable def width (S : Finset Perm) : ℕ :=
 def IsSperner (S : Finset Perm) : Prop :=
   width S = largestRank S
 
+/-- The length-3 permutation `213` (0-indexed: `0 ↦ 1, 1 ↦ 0, 2 ↦ 2`). -/
+def perm213 : Perm :=
+  ⟨3,
+    ⟨fun | ⟨0, _⟩ => 1 | ⟨1, _⟩ => 0 | ⟨2, _⟩ => 2,
+     fun | ⟨0, _⟩ => 1 | ⟨1, _⟩ => 0 | ⟨2, _⟩ => 2,
+     fun | ⟨0, _⟩ => rfl | ⟨1, _⟩ => rfl | ⟨2, _⟩ => rfl,
+     fun | ⟨0, _⟩ => rfl | ⟨1, _⟩ => rfl | ⟨2, _⟩ => rfl⟩⟩
+
+/-- The length-7 permutation `2574613`
+(0-indexed: `0 ↦ 1, 1 ↦ 4, 2 ↦ 6, 3 ↦ 3, 4 ↦ 5, 5 ↦ 0, 6 ↦ 2`). -/
+def perm2574613 : Perm :=
+  ⟨7,
+    ⟨fun
+      | ⟨0, _⟩ => 1 | ⟨1, _⟩ => 4 | ⟨2, _⟩ => 6 | ⟨3, _⟩ => 3
+      | ⟨4, _⟩ => 5 | ⟨5, _⟩ => 0 | ⟨6, _⟩ => 2,
+     fun
+      | ⟨0, _⟩ => 5 | ⟨1, _⟩ => 0 | ⟨2, _⟩ => 6 | ⟨3, _⟩ => 3
+      | ⟨4, _⟩ => 1 | ⟨5, _⟩ => 4 | ⟨6, _⟩ => 2,
+     fun
+      | ⟨0, _⟩ => rfl | ⟨1, _⟩ => rfl | ⟨2, _⟩ => rfl | ⟨3, _⟩ => rfl
+      | ⟨4, _⟩ => rfl | ⟨5, _⟩ => rfl | ⟨6, _⟩ => rfl,
+     fun
+      | ⟨0, _⟩ => rfl | ⟨1, _⟩ => rfl | ⟨2, _⟩ => rfl | ⟨3, _⟩ => rfl
+      | ⟨4, _⟩ => rfl | ⟨5, _⟩ => rfl | ⟨6, _⟩ => rfl⟩⟩
+
 private def toPP (π : Perm) : PatternPoset.Perm := ⟨π.len, π.perm⟩
 private def fromPP (π : PatternPoset.Perm) : Perm := ⟨π.len, π.perm⟩
 
@@ -99,7 +124,7 @@ private theorem width_map (S : Finset PatternPoset.Perm) :
     let B : Finset PatternPoset.Perm := A.map permEquiv.symm.toEmbedding
     have hAB : B.map permEquiv.toEmbedding = A := by
       ext x
-      simp [B, Finset.mem_map]
+      simp [B]
     have hsub : B ⊆ S := by
       intro b hb
       rcases Finset.mem_map.mp hb with ⟨a, ha, rfl⟩
@@ -122,13 +147,33 @@ private theorem width_map (S : Finset PatternPoset.Perm) :
     have hle := Finset.le_sup (f := Finset.card) hmem
     simpa [width, Finset.card_map] using hle
 
+private theorem fromPP_sigma7_eq : fromPP PatternPoset.σ₇ = perm213 := by
+  refine congrArg (Perm.mk 3) ?_
+  ext ⟨i, hi⟩
+  match i, hi with
+  | 0, _ => rfl
+  | 1, _ => rfl
+  | 2, _ => rfl
+
+private theorem fromPP_tau7_eq : fromPP PatternPoset.τ₇ = perm2574613 := by
+  refine congrArg (Perm.mk 7) ?_
+  ext ⟨i, hi⟩
+  match i, hi with
+  | 0, _ => rfl
+  | 1, _ => rfl
+  | 2, _ => rfl
+  | 3, _ => rfl
+  | 4, _ => rfl
+  | 5, _ => rfl
+  | 6, _ => rfl
+
 theorem mcnamara_steingrimsson_Q9_5_false :
-    ∃ σ τ : Perm, Contains σ τ ∧
+    Contains perm213 perm2574613 ∧
       ∃ I : Finset Perm,
-        (∀ π : Perm, π ∈ I ↔ Contains σ π ∧ Contains π τ) ∧
+        (∀ π : Perm, π ∈ I ↔ Contains perm213 π ∧ Contains π perm2574613) ∧
         I.card = 19 ∧ largestRank I = 7 ∧ width I = 8 ∧ ¬ IsSperner I := by
-  refine ⟨fromPP PatternPoset.σ₇, fromPP PatternPoset.τ₇,
-    (contains_iff _ _).mpr PatternPoset.sigma7_le_tau7,
+  rw [← fromPP_sigma7_eq, ← fromPP_tau7_eq]
+  refine ⟨(contains_iff _ _).mpr PatternPoset.sigma7_le_tau7,
     (PatternPoset.Interval PatternPoset.σ₇ PatternPoset.τ₇).map permEquiv.toEmbedding,
     ?_, ?_, ?_, ?_, ?_⟩
   · intro π

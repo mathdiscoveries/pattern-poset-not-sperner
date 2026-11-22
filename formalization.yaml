@@ -1,0 +1,98 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "Non-Sperner Intervals and Exact Deficiency Family in the Permutation Pattern Poset"
+  description: >-
+    Unconditional Lean 4 + Mathlib formalization refuting McNamara and
+    Steingrimsson's Question 9.5 (2015) via an explicit 19-element closed
+    interval [213, 2574613] of largest rank size 7 and width 8, and proving that
+    for every k >= 1 there exists a principal downset [empty, tau_k] whose width
+    exceeds its largest rank size by exactly k.
+  authors:
+    - "Tyler Hughes"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    - "Tyler Hughes"
+
+classification:
+  arxiv: ["math.CO"]
+  msc2020: ["05A05", "06A07"]
+
+sources:
+  - title: "Non-Sperner intervals and exact deficiency families in the permutation pattern poset"
+    type: original-proof
+    relationship: other
+    note: >-
+      Explicit 7-point interval counterexample and exact excess-k principal
+      downset family discovered and formalized in Lean 4 by AI research agents
+      built and directed by Tyler Hughes; documented at mathdiscoveries.org.
+  - title: "On the topology of the permutation pattern poset"
+    authors:
+      - "Peter R. W. McNamara"
+      - "Einar Steingrimsson"
+    id: "https://doi.org/10.1016/j.jcta.2015.01.008"
+    type: paper
+    location: "Journal of Combinatorial Theory, Series A 134 (2015), 1-35"
+    relationship: background
+    note: "Poses Question 9.5 asking whether every interval in the permutation pattern poset is Sperner."
+
+related_formalizations: []
+
+status:
+  scope: >-
+    Unconditionally proved in Lean 4 + Mathlib with standard axioms only (zero
+    sorry, zero native_decide): mcnamara_steingrimsson_Q9_5_false (19-element
+    interval with largestRank = 7 and width = 8) and downset_exact_deficiency
+    (width = largestRank + k for every k >= 1).
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Quot.sound", "Classical.choice"]
+
+automation:
+  methods:
+    - method: agent
+      models: []
+      framework: "AI research agent pipeline built and directed by Tyler Hughes"
+      tool_setup: >-
+        Autonomous builder, adversarial falsifier, and reviewer agents
+        discovered the counterexample and infinite family and formalized them in
+        Lean 4 + Mathlib.
+      cost:
+        wall_time: "not tracked"
+        spend_usd: "not tracked"
+        hardware: "local machine"
+      prompting_notes: "Goal-directed mathematical discovery and Lean 4 formalization."
+  spend_usd: "not tracked"
+  notes: >-
+    All proofs and Lean 4 formalizations were produced by AI research agents
+    built and directed by Tyler Hughes. No human mathematician has yet refereed
+    the proof.
+
+fidelity:
+  divergences: ""
+
+review:
+  status: agent-reviewed
+  reviewers:
+    - "Internal adversarial falsifier and reviewer agents"
+  notes: >-
+    Checked by separate internal falsifier and reviewer agents and audited for
+    standard axioms only via PatternPoset/Verify.lean. Not yet refereed by a
+    human mathematician.
+
+alignment:
+  namespace: "PatternPosetChallenge"
+  statements:
+    - source: "Refutation of McNamara-Steingrimsson Question 9.5"
+      lean: "PatternPosetChallenge.mcnamara_steingrimsson_Q9_5_false"
+      module: "Challenge"
+      status: proved
+      note: "Explicit 19-element interval with largestRank 7 and width 8."
+    - source: "Principal downset family with exact deficiency k >= 1"
+      lean: "PatternPosetChallenge.downset_exact_deficiency"
+      module: "Challenge"
+      status: proved
+      note: "For every k >= 1, a principal downset with width = largestRank + k."
+
+acknowledgements: "Built on Lean 4 and Mathlib."

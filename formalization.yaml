@@ -8,7 +8,13 @@ project:
     Steingrimsson's Question 9.5 (2015) via an explicit 19-element closed
     interval [213, 2574613] of largest rank size 7 and width 8, and proving that
     for every k >= 1 there exists a principal downset [empty, tau_k] whose width
-    exceeds its largest rank size by exactly k.
+    exceeds its largest rank size by exactly k. Companion write-up and dated
+    prior-work searches (arXiv, CORE 2026-11-20, Google Scholar 2026-11-22,
+    Zenodo, DataCite, HAL, OSF, and Elizalde-McNamara 2015 / Vatter 2026) are
+    published at https://mathdiscoveries.org/results/pattern-poset-not-sperner;
+    no prior non-Sperner interval of the classical pattern poset was found in
+    those logged searches, while Pouzet-Rosenberg (1986), Burosch et al.
+    (1990, 1996), and print monographs remain unread/unsearched.
   authors:
     - "Tyler Hughes"
   license: "Apache-2.0"
@@ -21,21 +27,45 @@ classification:
 
 sources:
   - title: "Non-Sperner intervals and exact deficiency families in the permutation pattern poset"
+    authors:
+      - "Tyler Hughes"
+    id: "https://mathdiscoveries.org/results/pattern-poset-not-sperner"
     type: original-proof
+    location: "Companion page, verification archive, and prior-work search log at https://mathdiscoveries.org/results/pattern-poset-not-sperner"
     relationship: other
     note: >-
-      Explicit 7-point interval counterexample and exact excess-k principal
-      downset family discovered and formalized in Lean 4 by AI research agents
-      built and directed by Tyler Hughes; documented at mathdiscoveries.org.
+      Explicit 7-point interval counterexample [213, 2574613] and exact
+      excess-k principal downset family discovered and formalized in Lean 4 by
+      AI research agents built and directed by Tyler Hughes. Not found in
+      logged prior-work searches (arXiv, Zenodo, DataCite, HAL, OSF, CORE
+      2026-11-20, Google Scholar 2026-11-22); Pouzet-Rosenberg (1986), Burosch
+      et al. (1990, 1996), and print monographs remain unread/unsearched.
   - title: "On the topology of the permutation pattern poset"
     authors:
       - "Peter R. W. McNamara"
       - "Einar Steingrimsson"
     id: "https://doi.org/10.1016/j.jcta.2015.01.008"
     type: paper
-    location: "Journal of Combinatorial Theory, Series A 134 (2015), 1-35"
+    location: "Journal of Combinatorial Theory, Series A 134 (2015), 1-35 (arXiv:1305.5569), Question 9.5"
     relationship: background
-    note: "Poses Question 9.5 asking whether every interval in the permutation pattern poset is Sperner."
+    note: "Poses Question 9.5 asking whether every interval in the classical permutation pattern poset is Sperner."
+  - title: "On intervals of the consecutive pattern poset"
+    authors:
+      - "Sergi Elizalde"
+      - "Peter R. W. McNamara"
+    id: "https://arxiv.org/abs/1508.05963"
+    type: paper
+    location: "arXiv:1508.05963 (2015)"
+    relationship: background
+    note: "Proves the consecutive pattern poset strongly Sperner while noting the classical pattern poset question remained open."
+  - title: "Permutation patterns problem list"
+    authors:
+      - "Vincent Vatter"
+    id: "https://arxiv.org/abs/2602.16355"
+    type: paper
+    location: "arXiv:2602.16355 (2026), Conjecture 2.1"
+    relationship: background
+    note: "Recent 2026 problem list consulted in the prior-work check (related rank-unimodality conjecture for downsets)."
 
 related_formalizations: []
 

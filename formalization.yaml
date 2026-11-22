@@ -16,10 +16,10 @@ project:
     those logged searches, while Pouzet-Rosenberg (1986), Burosch et al.
     (1990, 1996), and print monographs remain unread/unsearched.
   authors:
-    - "Tyler Hughes"
+    - "Tyler B. Hughes"
   license: "Apache-2.0"
   responsible_maintainers:
-    - "Tyler Hughes"
+    - "Tyler B. Hughes"
 
 classification:
   arxiv: ["math.CO"]
@@ -28,7 +28,7 @@ classification:
 sources:
   - title: "Non-Sperner intervals and exact deficiency families in the permutation pattern poset"
     authors:
-      - "Tyler Hughes"
+      - "Tyler B. Hughes"
     id: "https://mathdiscoveries.org/results/pattern-poset-not-sperner"
     type: original-proof
     location: "Companion page, verification archive, and prior-work search log at https://mathdiscoveries.org/results/pattern-poset-not-sperner"
@@ -36,7 +36,7 @@ sources:
     note: >-
       Explicit 7-point interval counterexample [213, 2574613] and exact
       excess-k principal downset family discovered and formalized in Lean 4 by
-      AI research agents built and directed by Tyler Hughes. Not found in
+      AI research agents built and directed by Tyler B. Hughes. Not found in
       logged prior-work searches (arXiv, Zenodo, DataCite, HAL, OSF, CORE
       2026-11-20, Google Scholar 2026-11-22); Pouzet-Rosenberg (1986), Burosch
       et al. (1990, 1996), and print monographs remain unread/unsearched.
@@ -83,7 +83,7 @@ automation:
   methods:
     - method: agent
       models: []
-      framework: "AI research agent pipeline built and directed by Tyler Hughes"
+      framework: "AI research agent pipeline built and directed by Tyler B. Hughes"
       tool_setup: >-
         Autonomous builder, adversarial falsifier, and reviewer agents
         discovered the counterexample and infinite family and formalized them in
@@ -96,7 +96,7 @@ automation:
   spend_usd: "not tracked"
   notes: >-
     All proofs and Lean 4 formalizations were produced by AI research agents
-    built and directed by Tyler Hughes. No human mathematician has yet refereed
+    built and directed by Tyler B. Hughes. No human mathematician has yet refereed
     the proof.
 
 fidelity:

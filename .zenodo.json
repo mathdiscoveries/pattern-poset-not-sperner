@@ -1,0 +1,46 @@
+{
+  "creators": [
+    {
+      "name": "Hughes, Tyler B.",
+      "orcid": "0000-0001-6221-9014"
+    }
+  ],
+  "title": "Non-Sperner Intervals and Exact Deficiency Family in the Permutation Pattern Poset",
+  "description": "Unconditional Lean 4 + Mathlib formalization refuting McNamara and Steingrimsson's Question 9.5 (2015) via an explicit 19-element closed interval [213, 2574613] of largest rank size 7 and width 8, and proving that for every k >= 1 there exists a principal downset [empty, tau_k] whose width exceeds its largest rank size by exactly k. Companion write-up and dated prior-work searches (arXiv, CORE 2026-11-20, Google Scholar 2026-11-22, Zenodo, DataCite, HAL, OSF, and Elizalde-McNamara 2015 / Vatter 2026) are published at https://mathdiscoveries.org/results/pattern-poset-not-sperner; no prior non-Sperner interval of the classical pattern poset was found in those logged searches, while Pouzet-Rosenberg (1986), Burosch et al. (1990, 1996), and print monographs remain unread/unsearched. Generated and checked by AI research agents built and directed by Tyler B. Hughes. No human mathematician has yet refereed the proof.",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "apache-2.0",
+  "language": "eng",
+  "keywords": [
+    "Lean 4",
+    "formalized mathematics",
+    "theorem proving",
+    "combinatorics",
+    "math.CO",
+    "MSC 2020: 05A05",
+    "MSC 2020: 06A07"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://mathdiscoveries.org/results/pattern-poset-not-sperner",
+      "relation": "isSupplementTo",
+      "resource_type": "other"
+    },
+    {
+      "identifier": "https://doi.org/10.1016/j.jcta.2015.01.008",
+      "relation": "references",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "https://arxiv.org/abs/1508.05963",
+      "relation": "references",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "https://arxiv.org/abs/2602.16355",
+      "relation": "references",
+      "resource_type": "publication-preprint"
+    }
+  ],
+  "notes": "Unrefereed. Generated and checked by AI research agents built and directed by Tyler B. Hughes."
+}

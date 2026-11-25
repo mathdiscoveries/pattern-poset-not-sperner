@@ -44,7 +44,7 @@ sources:
     authors:
       - "Peter R. W. McNamara"
       - "Einar Steingrimsson"
-    id: "https://doi.org/10.1016/j.jcta.2015.01.008"
+    id: "https://doi.org/10.1016/j.jcta.2015.02.009"
     type: paper
     location: "Journal of Combinatorial Theory, Series A 134 (2015), 1-35 (arXiv:1305.5569), Question 9.5"
     relationship: background

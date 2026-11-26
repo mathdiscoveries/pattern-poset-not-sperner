@@ -15,7 +15,15 @@ project:
     published at https://mathdiscoveries.org/results/pattern-poset-not-sperner;
     no prior non-Sperner interval of the classical pattern poset was found in
     those logged searches, while Pouzet-Rosenberg (1986), Burosch et al.
-    (1990, 1996), and print monographs remain unread/unsearched.
+    (1990, 1996), and print monographs remain unread/unsearched. Coverage by
+    this package's Palomar comparison: of the companion paper's 9 main
+    results, 2 are compared in Lean in full (22%; Corollary 1 and Theorem 3)
+    and 2 in part (Proposition 2: the interval's size 19 and largest rank size
+    7, not its full list of rank sizes; Theorem 8: deficiency exactly k for
+    some principal downset, not for the named downset [empty, tau_k]); Theorem
+    4 and Propositions 5, 6 and 7, with the full Proposition 2 and Theorem 8,
+    are proved in this package's Lean library but not compared; Proposition 9
+    is by certificate only; Conjecture 10 is open and not counted.
   authors:
     - "Tyler B. Hughes"
   license: "Apache-2.0"

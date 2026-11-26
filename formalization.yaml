@@ -4,9 +4,10 @@ version: "v0.4"
 project:
   name: "Non-Sperner Intervals and Exact Deficiency Family in the Permutation Pattern Poset"
   description: >-
-    Unconditional Lean 4 + Mathlib formalization refuting McNamara and
-    Steingrimsson's Question 9.5 (2015) via an explicit 19-element closed
-    interval [213, 2574613] of largest rank size 7 and width 8, and proving that
+    Unconditional Lean 4 + Mathlib formalization of the companion paper's
+    refutation of McNamara and Steingrimsson's Question 9.5 (2015) via an
+    explicit 19-element closed interval [213, 2574613] of largest rank size 7
+    and width 8, and of its proof that
     for every k >= 1 there exists a principal downset [empty, tau_k] whose width
     exceeds its largest rank size by exactly k. Companion write-up and dated
     prior-work searches (arXiv, CORE 2026-11-20, Google Scholar 2026-11-22,
@@ -26,20 +27,26 @@ classification:
   msc2020: ["05A05", "06A07"]
 
 sources:
-  - title: "Non-Sperner intervals and exact deficiency families in the permutation pattern poset"
+  - title: "Non-Sperner Intervals and Unbounded Exact Deficiency in the Classical Permutation Pattern Poset"
     authors:
       - "Tyler B. Hughes"
     id: "https://mathdiscoveries.org/results/pattern-poset-not-sperner"
-    type: original-proof
-    location: "Companion page, verification archive, and prior-work search log at https://mathdiscoveries.org/results/pattern-poset-not-sperner"
-    relationship: other
+    type: paper
+    location: "https://mathdiscoveries.org/results/pattern-poset-not-sperner"
+    relationship: formalizes
+    author_endorsement: participated
     note: >-
-      Explicit 7-point interval counterexample [213, 2574613] and exact
-      excess-k principal downset family discovered and formalized in Lean 4 by
-      AI research agents built and directed by Tyler B. Hughes. Not found in
-      logged prior-work searches (arXiv, Zenodo, DataCite, HAL, OSF, CORE
-      2026-11-20, Google Scholar 2026-11-22); Pouzet-Rosenberg (1986), Burosch
-      et al. (1990, 1996), and print monographs remain unread/unsearched.
+      The companion paper. It states and proves in writing every compared
+      statement of this package (Corollary 1 with Proposition 2 and Theorem 3,
+      and Theorem 8 with Propositions 6 and 7), and the Lean work formalizes
+      them; the formalization presents no result that the paper does not.
+      Logged prior-work searches (arXiv, Zenodo, DataCite, HAL, OSF, CORE
+      2026-11-20, Google Scholar 2026-11-22) did not find a non-Sperner
+      interval of the classical pattern poset; Pouzet-Rosenberg (1986),
+      Burosch et al. (1990, 1996), and print monographs remain unread or
+      unsearched [to check]. AI research agents built and directed by Tyler B.
+      Hughes generated and checked this work. No human mathematician has yet
+      refereed the proof.
   - title: "On the topology of the permutation pattern poset"
     authors:
       - "Peter R. W. McNamara"

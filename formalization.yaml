@@ -45,9 +45,12 @@ sources:
     author_endorsement: participated
     note: >-
       The companion paper. It states and proves in writing every compared
-      statement of this package (Corollary 1 with Proposition 2 and Theorem 3,
-      and Theorem 8 with Propositions 6 and 7), and the Lean work formalizes
-      them; the formalization presents no result that the paper does not.
+      statement of this package (Corollary 1 and Theorem 3 in full, and the
+      compared parts of Proposition 2 and Theorem 8), as well as the results
+      proved in this package's Lean library but not compared (Theorem 4,
+      Propositions 5, 6 and 7, and the full Proposition 2 and Theorem 8), and
+      the Lean work formalizes them; the formalization presents no result
+      that the paper does not.
       Logged prior-work searches (arXiv, Zenodo, DataCite, HAL, OSF, CORE
       2026-11-20, Google Scholar 2026-11-22) did not find a non-Sperner
       interval of the classical pattern poset; Pouzet-Rosenberg (1986),
@@ -64,7 +67,7 @@ sources:
     location: "Journal of Combinatorial Theory, Series A 134 (2015), 1-35 (arXiv:1305.5569), Question 9.5"
     relationship: background
     note: "Poses Question 9.5 asking whether every interval in the classical permutation pattern poset is Sperner."
-  - title: "On intervals of the consecutive pattern poset"
+  - title: "The structure of the consecutive pattern poset"
     authors:
       - "Sergi Elizalde"
       - "Peter R. W. McNamara"
@@ -73,7 +76,7 @@ sources:
     location: "arXiv:1508.05963 (2015)"
     relationship: background
     note: "Proves the consecutive pattern poset strongly Sperner while noting the classical pattern poset question remained open."
-  - title: "Permutation patterns problem list"
+  - title: "An assortment of problems in permutation patterns: unimodality, equivalence, derangements, and sorting"
     authors:
       - "Vincent Vatter"
     id: "https://arxiv.org/abs/2602.16355"
@@ -115,7 +118,12 @@ automation:
     the proof.
 
 fidelity:
-  divergences: ""
+  divergences: >-
+    Proposition 2 is compared only through the interval's size 19 and largest
+    rank size 7, not its full list of rank sizes (1, 3, 7, 7, 1); Theorem 8 is
+    compared as the existence, for every k >= 1, of a principal downset with
+    deficiency exactly k, not for the named downset [empty, tau_k]. Both full
+    statements are proved in the PatternPoset library but are not compared.
 
 review:
   status: agent-reviewed
